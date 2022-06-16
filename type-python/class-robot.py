@@ -19,6 +19,13 @@ class Robot:
     def how_many(cls):
         print(f"We have {cls.count} robots.")
 
+    def __str__(self):
+        return f"magic method str {self.name} !!"
+
+    def __call__(self):
+        print("magic method call")
+        return f"magic method call {self.name} !!"
+
 
 print(Robot.count)
 
@@ -28,3 +35,6 @@ bixby = Robot("bixby", 11452)
 bixby.greeting()
 
 Robot.how_many()
+
+print(bixby)
+print(bixby())
